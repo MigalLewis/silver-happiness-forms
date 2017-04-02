@@ -1,6 +1,11 @@
 <div class="section">
-  <form action="#">
+  <form action="save()">
     <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col group">
+        <button ng-click="save()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored pull-right">
+          <i class="material-icons">save</i>
+        </button>
+      </div>
       <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp group">
         <h2 class="mdl-card__title-text">Business Details</h2>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
@@ -60,32 +65,60 @@
           <span class="mdl-textfield__error">Input is not a valid fax number!</span>
         </div>
       </div>
-      <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp group">
-        <h2 class="mdl-card__title-text">Location</h2>
-        <div class="mdl-cell mdl-cell--6-col group">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
-            <input class="mdl-textfield__input" type="text" id="Street1">
-            <label class="mdl-textfield__label" for="Street1">Street 1...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
-            <input class="mdl-textfield__input" type="text" id="Street2">
-            <label class="mdl-textfield__label" for="Street2">Street 2...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
-            <input class="mdl-textfield__input" type="text" id="suburb">
-            <label class="mdl-textfield__label" for="suburb">Suburb...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
-            <input class="mdl-textfield__input" type="text" id="city">
-            <label class="mdl-textfield__label" for="city">City...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--3-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="code">
-            <label class="mdl-textfield__label" for="code">Postal Code...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--8-col">
-            <input class="mdl-textfield__input" type="text" id="country">
-            <label class="mdl-textfield__label" for="country">Country...</label>
+      <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp group mdl-grid ">
+
+        <h2 class="mdl-card__title-text mdl-cell mdl-cell--12-col">Location</h2>
+        <div class="mdl-cell mdl-cell--12-col group">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th><input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" /></th>
+                <th>Street 1</th>
+                <th>Street 2</th>
+                <th>Street 3</th>
+                <th>Suburb</th>
+                <th>Postal code</th>
+                <th>City</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="addressDetail in addressDetails">
+                <td>
+                  <input type="checkbox" ng-model="addressDetail.selected"/>
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.street1" required/>
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.street2" />
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.street3" />
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.suburb"  required/>
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.city"  required/>
+                </td>
+                <td>
+                  <input type="text" class="form-control" ng-model="addressDetail.postalcode" pattern="-?[0-9]*(\.[0-9]+)?" id="idNumber" required/>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </td>
+                <td>
+                  <input class="form-control" ng-model="addressDetail.country" required/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button-group">
+            <button ng-click="remove()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored pull-right">
+              <i class="material-icons">remove</i>
+            </button>
+            <button ng-click="addNew()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored pull-right">
+              <i class="material-icons">add</i>
+            </button>
           </div>
         </div>
 
