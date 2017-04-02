@@ -1,0 +1,74 @@
+<div class="section">
+  <div class="mdl-grid page-content">
+    <aside class="mdl-components__nav mdl-cell--3-col rightShadow">
+      <div class="mdl-list">
+        <ul class="large-block-grid-3 small-block-grid-1">
+          <li ng-repeat="member in members">
+            <div class="mdl-list__item">
+              <span class="mdl-list__item-primary-content">
+                <i class="material-icons mdl-list__item-avatar">person</i>
+                <span>member.name member.lastname</span>
+              </span>
+            </div>
+          </li></ul>
+      </div>
+    </aside>
+    <div class="mdl-cell--9-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label formCell">
+        <input class="mdl-textfield__input" type="text" id="name">
+        <label class="mdl-textfield__label" for="name">Name...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label formCell">
+        <input class="mdl-textfield__input" type="text" id="surname">
+        <label class="mdl-textfield__label" for="name">Surname...</label>
+      </div>
+      <div class="formCell">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="title-1" >
+          <input type="radio" id="title-1" class="mdl-radio__button" name="title" value="1" checked>
+          <span class="mdl-radio__label">Mr</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="title-2" >
+          <input type="radio" id="title-2" class="mdl-radio__button" name="title" value="2">
+          <span class="mdl-radio__label">Mrs</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="title-3">
+          <input type="radio" id="title-3" class="mdl-radio__button" name="title" value="3">
+          <span class="mdl-radio__label">Miss</span>
+        </label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label formCell">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idNumber">
+        <label class="mdl-textfield__label" for="idNumber">Id Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label formCell" >
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idNumber">
+        <label class="mdl-textfield__label" for="cellphone">Cellphone...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label formCell" >
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idNumber">
+        <label class="mdl-textfield__label" for="cellphone">Email...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+      <div class="formCell">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="beeClassification-1">
+          <input type="radio" id="beeClassification-1" class="mdl-radio__button" name="beeClassification" value="1" checked>
+          <span class="mdl-radio__label">B</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="beeClassification-2">
+          <input type="radio" id="beeClassification-2" class="mdl-radio__button" name="beeClassification" value="2">
+          <span class="mdl-radio__label">C</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="beeClassification-3">
+          <input type="radio" id="beeClassification-3" class="mdl-radio__button" name="beeClassification" value="3">
+          <span class="mdl-radio__label">I</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="beeClassification-4">
+          <input type="radio" id="beeClassification-4" class="mdl-radio__button" name="beeClassification" value="4">
+          <span class="mdl-radio__label">W</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
