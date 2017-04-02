@@ -33,4 +33,21 @@ and open the template in the editor.
 .button-group button{
   padding: 0px 20px;
 }
+.about-mdl-card{
+  width: 100%;
+  padding: 5px 20px;
+  background: url('../images/SouthAfrica.png') no-repeat scroll right/60%;
+}
+.about{
+  
+}
+.about .h3{
+  color: orange;
+}
+.about .right {
+  float:right;
+}
+.fraud {
+  background-color: orange;
+}
   

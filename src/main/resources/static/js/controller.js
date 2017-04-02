@@ -188,4 +188,7 @@ app.controller('fundingController', function ($scope) {
 app.controller('projectsController', function ($scope) {
   $scope.headingTitle = "Roles List";
 });
+app.controller('aboutController', function ($scope) {
+  $scope.headingTitle = "Roles List";
+});
 
