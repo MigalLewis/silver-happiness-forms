@@ -7,28 +7,22 @@ and open the template in the editor.
     Created on : 19 Mar 2017, 7:14:38 PM
     Author     : migal
 */
-.formCell{
-  width: 70%;
-}
-.content{
-  padding: 50px 150px;
-}
-.testColor{
-  background-color: green;
-}
-.rightShadow{
-  box-shadow:1px 0px 0px #757575;
-}
 .section{
-    margin: 5% 10%;
+    margin: 0% 10%;
+    width: 80%;
+    height: 100%;
     float:left;
 }
 .group{
-  
+  padding: 2px 15px;
 }
 
 .form-nav-link {
   height:64px;
   padding: 40px;
   color: white;
+}
+.form-group.mdl-card {
+  width:100%;
+  padding: 0px 20px;
 }
